@@ -1,0 +1,85 @@
+/*rest css 重置默认的一些样式 浏览器自带的 目的是为了保持各种终端显示一致*/
+/*所有的标签和伪类 before after*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+
+  /*在移动端特殊的设置*/
+  /*清除点击的高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: "MicroSoft YaHei", "sans-serif"; /*设置默认字体*/
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #333;
+}
+
+input,textarea{
+    border:none;
+    outline: none;
+    resize:none; /*不允许用户给textarea放大缩小*/
+    /* 特殊的属性定义 清除浏览器给input自带的样式 */
+    -webkit-appearance: none;/*组件默认样式空*/
+}
+
+/*common css 也就是我们公用的css*/
+.f_left{
+    float:left;
+}
+
+.f_right{
+    float:right;
+}
+
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear:both;
+}
+
+.m_r10{
+    margin-right: 10px;
+}
+
+.m_l10{
+    margin-left: 10px;
+}
+
+.m_t10{
+    margin-top: 10px;
+}
+
+.m_b10{
+    margin-bottom: 10px;
+}
+
+/*所有使用精灵图的 class 以 icon_开头的所有class都有这些属性 */
+[class^="icon_"]{
+  background: url("../images/sprites.png") no-repeat;
+  /** 压缩背景图，精灵图的原大小是400 * 400 */
+  background-size: 200px 200px;
+}

@@ -1,0 +1,137 @@
+body{
+    background:#f5f5f5;
+}
+
+.jd_layout{
+    min-width: 300px;/*适配小屏幕设备 为了保持布局的正常 设置比320px还小的屏幕的时候做适配*/
+    max-width: 640px;/*在行业中，设计图一般是640px 如果不限制那么图片就会被拉伸 页面的显示效果就差*/
+    margin: 0 auto;
+    /* height: 1000px; */
+    /* background-color: red; */
+    position: relative;
+}
+
+/**头部搜索区块*/
+.jd_header{
+    /** 在这里没有办法实现功能,因为fixed 基准是以window为基准的 并不是父容器 */
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height: 40px;
+    z-index:1;
+}
+
+.jd_header .jd_header_box{
+    margin:0 auto;
+    min-width: 300px;/*适配小屏幕设备 为了保持布局的正常 设置比320px还小的屏幕的时候做适配*/
+    max-width: 640px;/*在行业中，设计图一般是640px 如果不限制那么图片就会被拉伸 页面的显示效果就差*/
+    background: rgba(201,21,35,0);/*设置背景色和透明度*/
+    position: relative;
+    height: 40px;
+}
+
+.jd_header .jd_header_box .icon_logo{
+    background: url("../images/sprites.png");
+    /** 压缩背景图，精灵图的原大小是400 * 400 */
+    background-size: 200px 200px;
+    /** 位置也要压缩一倍 */
+    background-position: 0 -103px;
+    position: absolute;
+    left:10px;
+    top:4px;
+    height: 36px;
+    width:60px;
+}
+
+.jd_header .jd_header_box .login{
+    position: absolute;
+    width:50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    right:0px;
+    top:0px;
+    font-size: 15px;
+    color:#fff;
+}
+
+.jd_header .jd_header_box form{
+    width:100%;
+    padding-left: 75px;
+    padding-right: 55px;
+    position: relative;
+}
+
+.jd_header .jd_header_box form input{
+    /* 我们设置100%，是以父容器的内容计算的*/
+    width:100%;
+    border-radius: 15px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
+.jd_header .jd_header_box form .icon_search{
+    height: 20px;
+    width: 20px;
+    /** 位置也要压缩一倍 */
+    background-position: -60px -109px;
+    position: absolute;
+    left:80px;
+    top: 10px;
+}
+
+/*轮播图*/
+.jd_banner{
+    width:100%;
+    position: relative;
+    /* 一定要设置，否则搜索框就看不到了 */
+    overflow: hidden;
+}
+
+.jd_banner ul:nth-child(1){
+    /*这个时候我们需要放下10张图片 我们宽度就是父容器宽度的10倍*/
+    width:1000%;
+    /*c3的属性*/
+    transform: translateX(-10%);
+}
+
+.jd_banner ul:nth-child(1) li{
+    width:10%;
+    float: left;
+}
+
+.jd_banner ul:nth-child(1) li a{
+    width: 100%;
+    display: block;
+}
+
+.jd_banner ul:nth-child(1) li a img{
+    width: 100%;
+    /*清楚3像素的间距*/
+    display: block;
+}
+
+.jd_banner ul:nth-child(2){
+    position: absolute;
+    width:118px; /* 宽度 = 16*7 + 6 = 118 */
+    height: 6px;
+    /*绝对定位的盒子，如何居中？left 50%; margin-left 宽度的一般，并且是负值*/
+    left:50%;
+    margin-left: -59px;
+    bottom: 5px;
+}
+
+.jd_banner ul:nth-child(2) li{
+    float: left;
+    width:6px;
+    height: 6px;
+    border:1px solid #fff;
+    border-radius: 3px;
+    margin-left:10px;
+}
+
+.jd_banner ul:nth-child(2) li:first-child{
+    margin-left: 0px;
+}
