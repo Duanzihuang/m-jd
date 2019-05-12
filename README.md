@@ -51,3 +51,11 @@ user-scalable:no 不允许用户通过手指捏合进行缩放
 当设置图片的宽度为100%的时候，图片的高度会随着父容器（或是屏幕）的增加而增加【高度会随着父容器而改变】
 ```
 
+## 屏幕滚动
+
+> 获取屏幕滚动出去的距离的兼容写法
+
+```
+var top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop || 0
+```
+
