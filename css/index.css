@@ -136,6 +136,10 @@ body{
     margin-left: 0px;
 }
 
+.jd_banner ul:nth-child(2) .now{
+    background-color: #fff;
+}
+
 /*导航栏*/
 .jd_nav{
     background: #fff;
