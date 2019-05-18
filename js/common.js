@@ -16,3 +16,31 @@ itcast.transitonEnd = function(dom,callback){
         callback && callback()
     })
 }
+
+/**
+ * 封装移动端tap事件
+ */
+itcast.tap = function(dom,callback) {
+    var isMove = false
+    var startTime = 0
+
+    dom.addEventListener('touchstart',function(e){
+        // 开始事件
+        startTime = Date.now()
+    })
+
+    dom.addEventListener('touchmovue',function(e){
+        // 开始移动
+        isMove = true
+    })
+
+    dom.addEventListener('touchend',function(e){
+       if (!isMove && Date.now() - startTime < 150){
+           callback && callback(e)
+       }
+
+       // 重置相关变量
+       isMove = false
+       startTime = 0
+    })
+}

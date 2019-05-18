@@ -1,4 +1,142 @@
 html,body{
     height: 100%;
-    background-color: red;
 }
+
+.jd_headerNav{
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    padding:0 40px;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.jd_headerNav [class^="icon_"]{
+    width: 40px;
+    height: 44px;
+    display: block;
+    /* background-color: red; */
+    position: absolute;
+    /* 内容区域 */
+    padding:12px 10px;
+    /*
+    * 精灵图显示的位置从内容区域开始
+    */
+    background-origin: content-box;
+    /*
+    * 把精灵图显示在内容区域外面的内容裁减掉
+    */
+    background-clip: content-box;
+}
+
+.jd_headerNav .icon_back{
+    top:0;
+    left:0;
+    /* 精灵图的位置 */
+    background-position: -20px 0;
+}
+
+.jd_headerNav .icon_menu{
+    top:0;
+    right:0;
+    /* 精灵图的位置 */
+    background-position: -60px 0;
+}
+
+.jd_headerNav form input{
+    margin-top:7px;
+    height: 30px;
+    border:1px solid #e0e0e0;
+    width:100%;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+/*
+* 分类区域
+*/
+.jd_category{
+    height: 100%;
+    padding-top: 45px;
+    /* background-color: red; */
+}
+
+.jd_category_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.jd_category_left ul li{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f3f4f6;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.jd_category_left ul li.now{
+    border-right: none;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.jd_category_left ul li a {
+    display: block;
+}
+
+.jd_category_left ul li.now a{
+    color:#d8505c;
+}
+
+.jd_category_right{
+    height: 100%;
+    overflow: hidden;
+}
+
+.jd_category_right_content{
+    width: 100%;
+    padding:10px;
+}
+
+.jd_category_right_content a{
+    display: flex;
+}
+
+.jd_category_right_content a img{
+    width:100%;
+}
+
+.product_box{
+    padding-top: 10px;
+}
+
+.product_box h3{
+    font-size: 12px;
+    margin:10px 0px;
+}
+
+.product_box ul li{
+    float: left;
+    width:33.3333%;
+}
+
+.product_box ul li a{
+    display: block;
+}
+
+.product_box ul li a img{
+    display: block;
+    width:62px;
+    height: 62px;
+    margin: 0 auto;
+}
+
+.product_box ul li a p{
+    font-size: 12px;
+    text-align: center;
+    padding:10px;
+}
+
