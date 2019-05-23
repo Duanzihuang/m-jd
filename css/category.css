@@ -2,56 +2,6 @@ html,body{
     height: 100%;
 }
 
-.jd_headerNav{
-    height: 45px;
-    width: 100%;
-    position: absolute;
-    padding:0 40px;
-    background-color: #f3f4f6;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.jd_headerNav [class^="icon_"]{
-    width: 40px;
-    height: 44px;
-    display: block;
-    /* background-color: red; */
-    position: absolute;
-    /* 内容区域 */
-    padding:12px 10px;
-    /*
-    * 精灵图显示的位置从内容区域开始
-    */
-    background-origin: content-box;
-    /*
-    * 把精灵图显示在内容区域外面的内容裁减掉
-    */
-    background-clip: content-box;
-}
-
-.jd_headerNav .icon_back{
-    top:0;
-    left:0;
-    /* 精灵图的位置 */
-    background-position: -20px 0;
-}
-
-.jd_headerNav .icon_menu{
-    top:0;
-    right:0;
-    /* 精灵图的位置 */
-    background-position: -60px 0;
-}
-
-.jd_headerNav form input{
-    margin-top:7px;
-    height: 30px;
-    border:1px solid #e0e0e0;
-    width:100%;
-    border-radius: 3px;
-    padding-left: 8px;
-}
-
 /*
 * 分类区域
 */

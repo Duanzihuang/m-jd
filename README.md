@@ -59,3 +59,25 @@ user-scalable:no 不允许用户通过手指捏合进行缩放
 var top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop || 0
 ```
 
+## 动画事件
+
+```
+transitionEnd
+
+animationEnd
+```
+
+## 手势事件
+
+```
+touchstart
+
+touchmove
+
+touchend
+```
+
+## Zepto
+
+> 官网地址：<https://zeptojs.com/>
+
